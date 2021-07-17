@@ -1,0 +1,17 @@
+{% extends 'base.html' %}      <!-- to load here base.html file or to call here the base.html file that content all similar stuffs of all pages-->
+
+{% block content %}
+  <div class="container pt-4">
+    <div class="col-lg-5 shadow mx-auto p-0">
+      <div class="alert alert-success"><h2>Create Account</h2></div>
+      <div class="p-4">
+        <form method="post" action="/signup/">
+          {% csrf_token %} 
+          {{ form.as_p }}    <!-- Html ke andar ham python ka code likh sakte hain usko ham bolte hain templeting language-->    
+          <hr>
+          <input class="btn btn-success" type="submit" value="Create Account">
+        </form> 
+      </div>
+    </div>
+  </div>
+{% endblock %}
